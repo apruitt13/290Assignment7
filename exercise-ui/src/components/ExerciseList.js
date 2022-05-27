@@ -16,7 +16,7 @@ function ExerciseList({ exercises }) {
                 </tr>
             </thead>
             <tbody>
-                {exercises.map((movie, i) => <Exercise exercise={exercises}
+                {exercises.map((exercise, i) => <Exercise exercise={exercise}
                     key={i} />)}
             </tbody>
         </table>
