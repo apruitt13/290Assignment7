@@ -17,7 +17,11 @@ const exerciseSchema = mongoose.Schema({
     reps: { type: Number, required: true },
     weight: { type: Number, required: true },
     unit: { type: String, required: true },
-    date: { type: String, required: true }
+    // Not sure if this is the correct way so just trying it out.
+    date: { type: String, required: function isDateValid(date) {
+        const format = /^\d\d-\d\d-\d\d$/;
+        return format.test(date);
+    } }
 });
 
 /**
