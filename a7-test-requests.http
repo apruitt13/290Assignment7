@@ -198,7 +198,7 @@ GET  http://localhost:3000/exercises/6281146f945176f317005603 HTTP/1.1
 ### NOTE: Change the value of ID in the following URL to the ID assigned
 ###     to Deadlift with date 01-25-22. You can find that ID from the
 ##      previous retrieve request
-DELETE http://localhost:3000/exercises/6281b322c7c796ea344f05ee HTTP/1.1
+DELETE http://localhost:3000/exercises/6290fcb122336197a2047e77 HTTP/1.1
 
 
 ### Request 18: Verify that the Deadlift on 01-25-22 has been deleted. 404 status code

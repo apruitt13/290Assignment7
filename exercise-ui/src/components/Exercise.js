@@ -1,6 +1,7 @@
 import React from 'react';
+import { MdDeleteForever } from 'react-icons/md'
 
-function Exercise({ exercise }) {
+function Exercise({ exercise, onDelete }) {
     return (
         <tr>
             <td>{exercise.name}</td>
@@ -9,7 +10,7 @@ function Exercise({ exercise }) {
             <td>{exercise.unit}</td>
             <td>{exercise.date}</td>
             <td>Edit</td>
-            <td>Delete</td>
+            <td>< MdDeleteForever onClick={ () => onDelete(exercise._id)}/></td>
         </tr>
     );
 }
