@@ -5,14 +5,24 @@ import HomePage from './pages/HomePage';
 import AddExercisePage from './pages/AddExercisePage';
 import EditExercisePage from './pages/EditExercisePage';
 import {useState} from 'react';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [exerciseToEdit, setExerciseToEdit] = useState();
 
   return (
     <div className="App">
+
       <Router>
         <div className="App-header">
+          <nav class = "Navigation">
+            <o1>
+              <Link to = "/">Home</Link>
+                &nbsp;
+              <Link to = "/add-exercise">Add</Link>
+            </o1>
+
+          </nav>
           <Route path="/" exact>
             <HomePage  setExerciseToEdit = {setExerciseToEdit}/>
           </Route>

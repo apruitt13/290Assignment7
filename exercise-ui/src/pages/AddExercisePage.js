@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const AddExercisePage = () => {
 
@@ -61,7 +62,9 @@ export const AddExercisePage = () => {
                 onClick={addExercise}
             >Add</button>
         </div>
+        
     );
+    
 }
 
 export default AddExercisePage;

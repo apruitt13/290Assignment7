@@ -38,8 +38,7 @@ function HomePage({setExerciseToEdit}) {
         <>
             <h2>List of Exercise</h2>
             {<ExerciseList exercises={exercises} onDelete = {onDelete} onEdit={onEdit}></ExerciseList> }
-            <p><Link to = "/add-exercise">Add Exercise</Link></p>
-            
+                        
         </>
     );
 }

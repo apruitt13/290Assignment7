@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 export const EditExercisePage = ({exerciseToEdit}) => {
 
@@ -31,6 +32,7 @@ export const EditExercisePage = ({exerciseToEdit}) => {
 
     return (
         <div>
+
             <h1>Edit Exercise</h1>
             <input
                 type="text"
