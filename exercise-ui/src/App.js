@@ -14,10 +14,10 @@ function App() {
           <Route path="/" exact>
             <HomePage  />
           </Route>
-          <Route path="/add-exercise">
+          <Route path="/add-exercise" exact>
             <AddExercisePage />
           </Route>
-          <Route path="/edit-exercise">
+          <Route path="/edit-exercise" exact>
             <EditExercisePage />
           </Route>
           </div>

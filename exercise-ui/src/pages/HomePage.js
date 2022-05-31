@@ -32,7 +32,8 @@ function HomePage() {
         <>
             <h2>List of Exercise</h2>
             {<ExerciseList exercises={exercises} onDelete = {onDelete}></ExerciseList> }
-            {/* <Link to="/add-movie">Add an Exercise</Link> */}
+            <p><Link to = "/add-exercise">Add Exercise</Link></p>
+            
         </>
     );
 }
