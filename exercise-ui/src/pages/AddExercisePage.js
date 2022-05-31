@@ -11,7 +11,7 @@ export const AddExercisePage = () => {
 
     const history = useHistory();
 
-    const addExercise = async () => { 
+    const addExercise = async () => {
         const newExercise = {name, reps, weight, unit, date}
         const response = await fetch ('/exercises', {
             method: 'POST',
