@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
-import { Link } from 'react-router-dom';
 
 export const AddExercisePage = () => {
 
     const [name, setName] = useState('');
     const [reps, setReps] = useState('');
     const [weight, setWeight] = useState('');
-    const [unit, setUnit] = useState('');
+    const [unit, setUnit] = useState('lbs');
     const [date, setDate] = useState('');
 
     const history = useHistory();
@@ -48,11 +47,10 @@ export const AddExercisePage = () => {
                 placeholder="Enter weight here"
                 value={weight}
                 onChange={e => setWeight(e.target.value)} />
-            <input
-                type="text"
-                placeholder="Enter unit here"
-                value={unit}
-                onChange={e => setUnit(e.target.value)} />
+            <select name = "weight" onChange={e => setUnit(e.target.value)}>
+                <option value={'lbs'}> lbs</option>
+                <option value={'kgs'}> kgs</option>
+            </select>
             <input
                 type="text"
                 placeholder="Enter date here"
@@ -62,9 +60,7 @@ export const AddExercisePage = () => {
                 onClick={addExercise}
             >Add</button>
         </div>
-        
     );
-    
 }
 
 export default AddExercisePage;
