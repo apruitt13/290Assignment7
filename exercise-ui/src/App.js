@@ -21,7 +21,6 @@ function App() {
                 &nbsp;
               <Link to = "/add-exercise">Add</Link>
             </o1>
-
           </nav>
           <Route path="/" exact>
             <HomePage  setExerciseToEdit = {setExerciseToEdit}/>
