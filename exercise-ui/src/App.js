@@ -6,6 +6,7 @@ import AddExercisePage from './pages/AddExercisePage';
 import EditExercisePage from './pages/EditExercisePage';
 import {useState} from 'react';
 import { Link } from 'react-router-dom';
+import {BsClipboardData} from 'react-icons/bs'
 
 function App() {
   const [exerciseToEdit, setExerciseToEdit] = useState();
@@ -14,13 +15,17 @@ function App() {
     <div className="App">
 
       <Router>
+        <header> <h1>Exercise Tracker <BsClipboardData/></h1> 
+        <p>Edit, delete and add workouts to better track your performance</p>
+        <hr/>
+        </header>
+        
         <div className="App-header">
           <nav class = "Navigation">
-            <o1>
-              <Link to = "/">Home</Link>
-                &nbsp;
-              <Link to = "/add-exercise">Add</Link>
-            </o1>
+            <o1><Link to = "/"> Home </Link></o1>
+            &nbsp;&nbsp;
+            <o1><Link to = "/add-exercise"> Add </Link></o1>
+            <hr/>
           </nav>
           <Route path="/" exact>
             <HomePage  setExerciseToEdit = {setExerciseToEdit}/>
@@ -32,6 +37,7 @@ function App() {
             <EditExercisePage exerciseToEdit = {exerciseToEdit}/>
           </Route>
           </div>
+          <footer> <p>© 2022 Adam Pruitt</p> </footer>
       </Router>
     </div>
   );

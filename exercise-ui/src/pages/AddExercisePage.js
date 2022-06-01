@@ -31,7 +31,7 @@ export const AddExercisePage = () => {
 
     return (
         <div>
-            <h1>Add Exercise</h1>
+            <h4>Add Exercise</h4>
             <input
                 type="text"
                 placeholder="Enter exercise here"

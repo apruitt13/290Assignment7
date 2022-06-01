@@ -1,13 +1,60 @@
 body {
-  background-color: rgb(255,255,255);
+  background-color: rgb(243, 243, 243);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color:rgb(16, 16, 75);
+  margin: auto;
+  padding: 0.5px;
+  text-align: center;
+}
+h1{
+  color:rgb(16, 16, 75);
 }
 
+h4{
+  color:rgb(16, 16, 75);
+}
+
+
+table, tr, th {
+  border: 2px solid rgb(36, 34, 57);
+  padding: 0.5px; 
+  color: green;
+  background: rgb(143, 195, 214)
+}
+
+table, tr, td{
+  border: 2px solid grey;  
+  color: rgb(16, 16, 75);
+  padding: 1px; 
+
+}
+a{
+  color: #1100ff;
+  text-decoration: None;
+}
+
+table, tr:nth-child(odd){
+  color: yellow;
+  border: 2px solid grey; 
+  padding: 1px; 
+  background: rgb(181, 229, 241);
+}
+
+input{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(143, 195, 214);
+  text-align: center;
+  
+}
 .App {
   text-align: center;
 }
 
 .App-header {
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;

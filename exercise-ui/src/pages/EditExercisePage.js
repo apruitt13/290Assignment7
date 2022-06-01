@@ -33,7 +33,7 @@ export const EditExercisePage = ({exerciseToEdit}) => {
     return (
         <div>
 
-            <h1>Edit Exercise</h1>
+            <h4>Edit Exercise</h4>
             <input
                 type="text"
                 value={name}
