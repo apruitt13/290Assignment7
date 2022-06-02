@@ -49,10 +49,6 @@ app.post('/exercises', (req, res) => {
  */
  app.get('/exercises', (req, res) => {
     let filter = {};
-    // Is there a query parameter named year? If so add a filter based on its value.
-    if(req.query.year !== undefined){
-        filter = { year: req.query.year };
-    }
     exercises.findExercise(filter, '', 0)
         .then(exercise => {
             res.send(exercise);
@@ -66,7 +62,7 @@ app.post('/exercises', (req, res) => {
 
 /**
  * Update the exercise whose id is provided in the path parameter and set
- * its title, year and language to the values provided in the body.
+ * its name, reps, weight, unit, date to the values provided in the body.
  */
  app.put('/exercises/:_id', (req, res) => {
     exercises.replaceExercise(req.params._id, req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)

@@ -12,11 +12,11 @@ const db = mongoose.connection;
 /**
  * Define the schema
  */
-const exerciseSchema = mongoose.Schema({
+ const exerciseSchema = mongoose.Schema({
     name: { type: String, required: true },
     reps: { type: Number, required: true },
-    weight: { type: Number, required: true, validate: function (weight) {
-        return weight.length >= 1
+    weight: { type: Number, required: true, validate: function () {
+        return this.weight > 0
     }},
     unit: { type: String, required: true },
     // Not sure if this is the correct way so just trying it out.
@@ -51,7 +51,7 @@ const findExerciseById = async (_id) => {
 
 // Updates a user depending on the entered information. ID is required for it to work.
 const replaceExercise = async (_id, name, reps, weight, unit, date) => {
-    const result = await Exercise.replaceOne({_id:_id}, {name: name, reps: reps, weight: weight, unit: unit, date: date});
+    const result = await Exercise.updateOne({_id:_id}, {name: name, reps: reps, weight: weight, unit: unit, date: date});
     return result.modifiedCount;
 }
 // Deletes a user depending on the conditions entered. Will delete all users that match the condition.
