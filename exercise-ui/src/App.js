@@ -16,7 +16,7 @@ function App() {
 
       <Router>
         <header> <h1>Exercise Tracker <BsClipboardData/></h1> 
-        <p>Edit, delete and add workouts to better track your performance</p>
+        <p>Add, edit and delete workouts to better track your performance</p>
         <hr/>
         </header>
         

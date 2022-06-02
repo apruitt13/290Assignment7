@@ -32,6 +32,7 @@ export const AddExercisePage = () => {
     return (
         <div>
             <h4>Add Exercise</h4>
+            <hr/>
             <input
                 type="text"
                 placeholder="Enter exercise here"
