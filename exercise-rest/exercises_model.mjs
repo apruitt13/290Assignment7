@@ -26,6 +26,8 @@ const db = mongoose.connection;
     }}
 });
 
+const opts = { runValidators: true}
+
 /**
  * Compile the model from the schema. This must be done after defining the schema.
  */
@@ -51,7 +53,7 @@ const findExerciseById = async (_id) => {
 
 // Updates a user depending on the entered information. ID is required for it to work.
 const replaceExercise = async (_id, name, reps, weight, unit, date) => {
-    const result = await Exercise.updateOne({_id:_id}, {name: name, reps: reps, weight: weight, unit: unit, date: date});
+    const result = await Exercise.updateOne({_id:_id}, {name: name, reps: reps, weight: weight, unit: unit, date: date}, { runValidators: true});
     return result.modifiedCount;
 }
 // Deletes a user depending on the conditions entered. Will delete all users that match the condition.
