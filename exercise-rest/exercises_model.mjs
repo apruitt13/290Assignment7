@@ -14,7 +14,7 @@ const db = mongoose.connection;
  */
  const exerciseSchema = mongoose.Schema({
     name: { type: String, required: true },
-    reps: { type: Number, required: true },
+    reps: { type: Number, required: true, min: 1},
     weight: { type: Number, required: true, min: 1},
     unit: { type: String, required: true },
     // Not sure if this is the correct way so just trying it out.
