@@ -51,11 +51,7 @@ const findExerciseById = async (_id) => {
 
 // Updates an exercise depending on the entered information. ID is required for it to work.
 const replaceExercise = async (_id, name, reps, weight, unit, date) => {
-<<<<<<< HEAD
-    const result = await Exercise.updateOne({_id:_id}, {name: name, reps: reps, weight: weight, unit: unit, date: date}, { runValidators: true});
-=======
     const result = await Exercise.updateOne({_id:_id}, {name: name, reps: reps, weight: weight, unit: unit, date: date}, { runValidators: true, context: 'query' });
->>>>>>> 06eca2b57c73eff6ca7fac77284418e0318d4fda
     return result.modifiedCount;
 }
 // Deletes a user depending on the conditions entered. Will delete all users that match the condition.
