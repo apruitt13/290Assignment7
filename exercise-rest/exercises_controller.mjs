@@ -65,6 +65,9 @@ app.post('/exercises', (req, res) => {
  * its name, reps, weight, unit, date to the values provided in the body.
  */
  app.put('/exercises/:_id', (req, res) => {
+    if (Object.keys(req.body).length != 5){
+        res.status(400).json({ Error: 'Request failed' });
+        return}
     exercises.replaceExercise(req.params._id, req.body.name, req.body.reps, req.body.weight, req.body.unit, req.body.date)
         .then(numUpdated => {
             if (numUpdated === 1) {

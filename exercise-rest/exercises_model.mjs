@@ -15,9 +15,7 @@ const db = mongoose.connection;
  const exerciseSchema = mongoose.Schema({
     name: { type: String, required: true },
     reps: { type: Number, required: true },
-    weight: { type: Number, required: true, validate: function () {
-        return this.weight > 0
-    }},
+    weight: { type: Number, required: true, min: 1},
     unit: { type: String, required: true },
     // Not sure if this is the correct way so just trying it out.
     date: { type: String, required: true, validate: function isDateValid(date) {
@@ -49,9 +47,9 @@ const findExerciseById = async (_id) => {
     return query.exec();
 }
 
-// Updates a user depending on the entered information. ID is required for it to work.
+// Updates an exercise depending on the entered information. ID is required for it to work.
 const replaceExercise = async (_id, name, reps, weight, unit, date) => {
-    const result = await Exercise.updateOne({_id:_id}, {name: name, reps: reps, weight: weight, unit: unit, date: date});
+    const result = await Exercise.updateOne({_id:_id}, {name: name, reps: reps, weight: weight, unit: unit, date: date}, { runValidators: true, context: 'query' });
     return result.modifiedCount;
 }
 // Deletes a user depending on the conditions entered. Will delete all users that match the condition.
