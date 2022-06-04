@@ -118,7 +118,7 @@ GET http://localhost:3000/exercises HTTP/1.1
 ###     all occurrences of the ID value in the file, since later tests
 ###     also use the ID for Deadlift with date 01-25-22
 
-PUT http://localhost:3000/exercises/629ac9d128254aa2b52f155a HTTP/1.1
+PUT http://localhost:3000/exercises/629ad2bc73f135ea0a19f007 HTTP/1.1
 content-type: application/json
 
 {

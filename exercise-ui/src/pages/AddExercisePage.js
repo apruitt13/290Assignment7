@@ -5,8 +5,8 @@ export const AddExercisePage = () => {
     {/** All the items needed to add a new exercise. Weight is automatically set to lbs. */}
     const [name, setName] = useState('');
     const [reps, setReps] = useState('');
-    const [weight, setWeight] = useState('');
-    const [unit, setUnit] = useState('lbs');
+    const [weight, setWeight] = useState('lbs');
+    const [unit, setUnit] = useState('');
     const [date, setDate] = useState('');
 
     const history = useHistory();
@@ -50,7 +50,7 @@ export const AddExercisePage = () => {
                 placeholder="Enter weight here"
                 value={weight}
                 onChange={e => setWeight(e.target.value)} />
-            <select name = "weight" onChange={e => setUnit(e.target.value)}>
+            <select value = {'lbs'} name = "weight" onChange={e => setUnit(e.target.value)}>
                 <option value={'lbs'}> lbs</option>
                 <option value={'kgs'}> kgs</option>
             </select>
