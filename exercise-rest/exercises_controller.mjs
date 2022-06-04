@@ -24,7 +24,7 @@ app.post('/exercises', (req, res) => {
 
 
 /**
- * Retrive the exercise corresponding to the ID provided in the URL.
+ * Retrives the exercise corresponding to the ID provided.
  */
  app.get('/exercises/:_id', (req, res) => {
     const exerciseId = req.params._id;
@@ -43,9 +43,7 @@ app.post('/exercises', (req, res) => {
 });
 
 /**
- * Retrieve exercises. 
- * If the query parameters include a year, then only the exercises for that year are returned.
- * Otherwise, all exercises are returned.
+ * Retrieves all exercises.  
  */
  app.get('/exercises', (req, res) => {
     let filter = {};

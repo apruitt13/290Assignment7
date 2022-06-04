@@ -1,6 +1,7 @@
 import React from 'react';
 import Exercise from './Exercise';
 
+/** The react element for the table. Takes in the exercises and the ability to delete or edit. */
 function ExerciseList({ exercises, onDelete, onEdit }) {
     return (
         <table id="exercises">

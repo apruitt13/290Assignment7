@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 
 export const AddExercisePage = () => {
-
+    {/** All the items needed to add a new exercise. Weight is automatically set to lbs. */}
     const [name, setName] = useState('');
     const [reps, setReps] = useState('');
     const [weight, setWeight] = useState('');
@@ -11,6 +11,7 @@ export const AddExercisePage = () => {
 
     const history = useHistory();
 
+    {/** Adds a new exercises using post. */}
     const addExercise = async () => {
         const newExercise = {name, reps, weight, unit, date}
         const response = await fetch ('/exercises', {
@@ -31,6 +32,7 @@ export const AddExercisePage = () => {
 
     return (
         <div>
+            {/** Table used to enter the data for adding a new exercise. */}
             <h4>Add Exercise</h4>
             <hr/>
             <input

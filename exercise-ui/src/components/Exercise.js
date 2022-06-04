@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdDeleteForever, MdEdit } from 'react-icons/md'
 
-
+/** The row element for react All the information for individual exercises with the edit and delete options. */
 function Exercise({ exercise, onDelete, onEdit }) {
     return (
         <tr>

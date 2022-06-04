@@ -12,6 +12,7 @@ export const EditExercisePage = ({exerciseToEdit}) => {
 
     const history = useHistory();
 
+    {/** When an exercise is edited using the PUT method. */}
     const editExercise = async () => {
         const editedExercise = {name, reps, weight, unit, date}
         const response = await fetch (`/exercises/${exerciseToEdit._id}`, {
@@ -32,7 +33,7 @@ export const EditExercisePage = ({exerciseToEdit}) => {
 
     return (
         <div>
-
+            {/** The table for editing the exercises. */}
             <h4>Edit Exercise</h4>
             <hr/>
             <input
